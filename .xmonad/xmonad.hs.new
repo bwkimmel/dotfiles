@@ -15,7 +15,7 @@ myManageHook = composeAll
     ]
 
 main = do
-    xmproc <- spawnPipe "/usr/bin/xmobar /home/mark/.xmobarrc"
+    xmproc <- spawnPipe "/usr/bin/xmobar /home/brad/.xmobarrc"
     xmonad $ defaultConfig { terminal = "urxvt" }
         { manageHook = manageDocks <+> manageHook defaultConfig
         , startupHook = takeTopFocus >> setWMName "LG3D" -- fix for Java apps
